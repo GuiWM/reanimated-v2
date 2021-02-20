@@ -7,6 +7,9 @@ import Animated, {
 import {View, Button} from 'react-native';
 import React from 'react';
 
+import Scroll from './screens/Scroll';
+import OpenSection from './screens/OpenSection';
+
 export default function AnimatedStyleUpdateExample(props) {
   const randomWidth = useSharedValue(10);
 
@@ -22,23 +25,24 @@ export default function AnimatedStyleUpdateExample(props) {
   });
 
   return (
-    <View
-      style={{
-        flex: 1,
-        flexDirection: 'column',
-      }}>
-      <Animated.View
-        style={[
-          {width: 100, height: 80, backgroundColor: 'black', margin: 30},
-          style,
-        ]}
-      />
-      <Button
-        title="toggle"
-        onPress={() => {
-          randomWidth.value = Math.random() * 350;
-        }}
-      />
-    </View>
+    // <View
+    //   style={{
+    //     flex: 1,
+    //     flexDirection: 'column',
+    //   }}>
+    //   <Animated.View
+    //     style={[
+    //       {width: 100, height: 80, backgroundColor: 'black', margin: 30},
+    //       style,
+    //     ]}
+    //   />
+    //   <Button
+    //     title="toggle"
+    //     onPress={() => {
+    //       randomWidth.value = Math.random() * 350;
+    //     }}
+    //   />
+    // </View>
+    <OpenSection />
   );
 }
