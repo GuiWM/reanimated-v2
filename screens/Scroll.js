@@ -10,6 +10,8 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 
+import me from '../me.jpeg';
+
 const Scroll = () => {
   const scrollY = useSharedValue(0);
   const imageSize = useSharedValue(140);
@@ -76,10 +78,7 @@ const Scroll = () => {
     <View style={styles.container}>
       <Animated.View style={[styles.header, headerStyle]}>
         <TouchableOpacity onPress={() => handleOpenProfile()}>
-          <Animated.Image
-            style={[styles.avatar, avatarStyle]}
-            source={{uri: 'https://github.com/guiwm.png'}}
-          />
+          <Animated.Image style={[styles.avatar, avatarStyle]} source={me} />
         </TouchableOpacity>
 
         <Animated.Text style={[styles.name, textStyle]}>

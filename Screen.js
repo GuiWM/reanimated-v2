@@ -9,6 +9,7 @@ import React from 'react';
 
 import Scroll from './screens/Scroll';
 import OpenSection from './screens/OpenSection';
+import AnimatedScroll from './screens/AnimatedScroll';
 
 export default function AnimatedStyleUpdateExample(props) {
   const randomWidth = useSharedValue(10);
@@ -43,6 +44,7 @@ export default function AnimatedStyleUpdateExample(props) {
     //     }}
     //   />
     // </View>
-    <OpenSection />
+    //<OpenSection />
+    <AnimatedScroll />
   );
 }

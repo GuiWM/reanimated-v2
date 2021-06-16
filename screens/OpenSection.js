@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {
   StyleSheet,
@@ -5,6 +6,7 @@ import {
   View,
   Dimensions,
   TouchableOpacity,
+  TextInput,
 } from 'react-native';
 import Animated, {
   withTiming,
@@ -12,6 +14,8 @@ import Animated, {
   useAnimatedStyle,
   Easing,
 } from 'react-native-reanimated';
+
+import Input from '../components/Input';
 
 const OpenSection = () => {
   const openViewY = useSharedValue(0);
@@ -39,7 +43,9 @@ const OpenSection = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Eae</Text>
+      <Input />
+      <Input />
+      <TextInput onChange={(text) => {}} value="" />
 
       <Animated.View style={[styles.openView, openViewStyle]}>
         <TouchableOpacity style={{marginTop: 20}} onPress={() => handlePress()}>
@@ -60,10 +66,10 @@ const OpenSection = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
     justifyContent: 'center',
     alignItems: 'center',
     overflow: 'hidden',
+    backgroundColor: 'black',
   },
 
   title: {
